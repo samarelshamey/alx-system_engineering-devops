@@ -1,0 +1,5 @@
+#!/bin/bash
+ls -all -l /0x00-shell_basics/
+ls -all -l /alx-system_engineering-devops/
+ls -all -l /root/
+ls -all -l /boot
