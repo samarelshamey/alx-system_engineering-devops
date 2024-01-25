@@ -9,9 +9,9 @@ do
 	echo "Hour: $hour"
 	while [ $min -le 59 ]
 	do
-		echo "$hour:$min"
+		echo "$min"
 		(( min++ ))
-		if [ $hour -eq 12 ] && [ $min -eq 60 ]
+		if [ $hour -eq 12 ] && [ $min -eq 10 ]
 		then
 			break 2
 		fi
