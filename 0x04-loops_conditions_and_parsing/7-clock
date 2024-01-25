@@ -5,16 +5,12 @@ hour=0
 
 while [ $hour -le 12 ]
 do
-	min=1
 	echo "Hour: $hour"
+	min=1
 	while [ $min -le 59 ]
 	do
 		echo "$min"
 		(( min++ ))
-		if [ $hour -eq 12 ] && [ $min -eq 10 ]
-		then
-			break 2
-		fi
 	done
 	(( hour++ ))
 done
