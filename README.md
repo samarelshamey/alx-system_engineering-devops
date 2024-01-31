@@ -1,1 +1,0 @@
-shell navigation basics
