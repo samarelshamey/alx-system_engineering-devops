@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #using puppet to make changes to our configuration file.
 file { '/etc/ssh/ssh_config':
-ensure => 'present',
+ensure => present,
 }
 file_line { 'disable pass auth':
 path  => '/etc/ssh/ssh_config',
