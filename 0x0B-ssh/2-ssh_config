@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configuration file
+Host *
+ PasswordAuthentication no
+ IdentityFile ~/.ssh/school
+ User ubuntu
+ Hostname 18.210.19.143
