@@ -1,15 +1,8 @@
-#!/usr/bin/env bash
-#using puppet to make changes to our configuration file.
+#using puppet to make changes to config file
 file { '/etc/ssh/ssh_config':
-ensure => present,
-}
-file_line { 'disable pass auth':
-path  => '/etc/ssh/ssh_config',
-line  => 'PasswordAuthentication no',
-match => 'PasswordAuthentication',
-}
-file_line { 'declare idenity file':
-path  => '/etc/ssh/ssh_config',
-line  => 'IdentityFile ~/.ssh/school',
-match => 'IdentityFile',
+content => "
+HostName 18.210.19.143
+User ubuntu
+IdentityFile ~/.ssh/school
+PasswordAuthentication no",
 }
