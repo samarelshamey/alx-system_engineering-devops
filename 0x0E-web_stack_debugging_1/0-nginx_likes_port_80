@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 # debug ngnix installation
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
