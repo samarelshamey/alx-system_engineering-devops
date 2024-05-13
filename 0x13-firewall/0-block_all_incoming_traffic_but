@@ -1,0 +1,20 @@
+echo -e "Start Updating\n"
+
+sudo apt-get update
+
+echo -e "Start Installing UFW\n"
+
+sudo apt-get install -y ufw
+
+echo -e "Start configuring UFW...\n"
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
+
+sudo ufw enable
+
+echo -e "Completed.\n"
