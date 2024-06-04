@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""eturns a list containing the titles of all hot articles for a given subreddit"""
+"""returns a list of the titles of all articles for a given subreddit"""
 import requests
 
 
@@ -12,7 +12,8 @@ def recurse(subreddit, hot_list=None, after=None):
     headers = {'User-Agent': 'Custom User Agent'}
 
     try:
-        response = requests.get(url, params=params, headers=headers, allow_redirects=False)
+        response = requests.get(url, params=params,
+                                headers=headers, allow_redirects=False)
         response.raise_for_status()
         data = response.json()
         if 'data' in data and 'children' in data['data']:

@@ -17,4 +17,3 @@ def top_ten(subreddit):
             print("None")
     except requests.RequestException as e:
         print("None")
-
