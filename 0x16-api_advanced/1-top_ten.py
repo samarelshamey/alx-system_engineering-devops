@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""queries the Reddit API and prints the titles of the first 10 hot posts"""
+"""prints the titles of the first 10 hot posts"""
 import requests
 
 
@@ -17,3 +17,4 @@ def top_ten(subreddit):
             print("None")
     except requests.RequestException as e:
         print("None")
+
